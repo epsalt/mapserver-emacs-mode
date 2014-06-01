@@ -110,7 +110,7 @@
 		    (setq not-indented nil))
 		;; CLASS FEATURE FONTSET GRID JOIN LAYER LEGEND MAP OUTPUTFORMAT POINTS PROJECTION QUERYMAP REFERENCE SCALEBAR STYLE WEB
 		(if (or (looking-at "^SYMBOL$")
-			(looking-at "^[ \t]*\\(CLASS\\|FEATURE\\|FONTSET\\|GRID\\|JOIN\\|LABEL\\b\\|LAYER\\|LEGEND\\|MAP\\|OUTPUTFORMAT\\|POINTS\\|PROJECTION\\|QUERYMAP\\|REFERENCE\\|SCALEBAR\\|STYLE\\|WEB\\)"))	; This hint indicates that we need to indent an extra level
+			(looking-at "^[ \t]*\\(CLASS\\|FEATURE\\|FONTSET\\|GRID\\|JOIN\\|LABEL\\b\\|LAYER\\|LEGEND\\|MAP\\|METADATA\\|OUTPUTFORMAT\\|POINTS\\|PROJECTION\\|QUERYMAP\\|REFERENCE\\|SCALEBAR\\|SYMBOL\\|STYLE\\|WEB\\)"))	; This hint indicates that we need to indent an extra level
 		    (progn
 		      (setq cur-indent (+ (current-indentation) mapserver-mode-tab-width)) ; Do the actual indenting
 		      (setq not-indented nil))
