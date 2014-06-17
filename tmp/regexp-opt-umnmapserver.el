@@ -95,7 +95,7 @@
               "LABELCACHE"
               "LABELITEM"
               "LABELMAXSCALEDENOM"
-              "LABELMINSCALEDEMON"
+              "LABELMINSCALEDENOM"
               "LABELREQUIRES"
               "LABELSIZEITEM"
               "MASK"
@@ -300,3 +300,111 @@
 
 
 "\\(A\\(?:LIGN\\|N\\(?:CHORPOINT\\|GLE\\(?:ITEM\\)?\\|TIALIAS\\)\\)\\|B\\(?:\\(?:ACKGROUND\\(?:\\(?:SHADOW\\)?COLO\\)\\|UFFE\\)R\\)\\|C\\(?:HARACTER\\|LASS\\(?:GROUP\\|ITEM\\)\\|O\\(?:LOR\\|N\\(?:FIG\\|NECTION\\(?:TYPE\\)?\\)\\)\\)\\|D\\(?:ATA\\(?:PATTERN\\)?\\|E\\(?:BUG\\|FRESOLUTION\\)\\|UMP\\)\\|E\\(?:MPTY\\|NCODING\\|RROR\\|X\\(?:PRESSION\\|TENT\\)\\)\\|F\\(?:IL\\(?:LED\\|TER\\(?:ITEM\\)?\\)\\|O\\(?:CE\\|NT\\(?:SET\\)?\\|OTER\\)\\|ROM\\)\\|G\\(?:AP\\|EOMTRANSFORM\\|R\\(?:\\(?:IDSTE\\|OU\\)P\\)\\)\\|HEADER\\|I\\(?:MAGE\\(?:COLOR\\|PATH\\|QUALITY\\|TYPE\\|URL\\)?\\|N\\(?:ITIALGAP\\|TERLACE\\)\\|TEMS\\)\\|KEY\\(?:IMAGE\\|S\\(?:IZE\\|PACING\\)\\)\\|L\\(?:ABEL\\(?:ANGLEITEM\\|CACHE\\|FORMAT\\|ITEM\\|M\\(?:AXSCALEDENOM\\|INSCALEDEMON\\)\\|REQUIRES\\|SIZEITEM\\)\\|EGENDFORMAT\\|INE\\(?:CAP\\|JOIN\\(?:MAXSIZE\\)?\\)\\|OG\\)\\|M\\(?:A\\(?:RKER\\(?:SIZE\\)?\\|SK\\|X\\(?:ARCS\\|BOXSIZE\\|DISTANCE\\|FEATURES\\|GEOWIDTH\\|INTERVAL\\|LENGTH\\|OVERLAPANGLE\\|S\\(?:CALE\\(?:DENOM\\)?\\|\\(?:IZ\\|UBDIVID\\)E\\)\\|TEMPLATE\\|WIDTH\\)\\)\\|ETADATA\\|I\\(?:N\\(?:ARCS\\|BOXSIZE\\|DISTANCE\\|FEATURESIZE\\|GEOWIDTH\\|INTERVAL\\|S\\(?:CALEDENOM\\|\\(?:IZ\\|UBDIVID\\)E\\)\\|TEMPLATE\\|WIDTH\\)\\|SCALE\\)\\)\\|NAME\\|O\\(?:FFS\\(?:ET\\|IZE\\)\\|PACITY\\|UTLINE\\(?:COLOR\\|WIDTH\\)\\)\\|P\\(?:A\\(?:RTIALS\\|TTERN\\)\\|LUGIN\\|O\\(?:INTS\\|LAROFFSET\\|S\\(?:ITION\\|TLABELCACHE\\)\\)\\|R\\(?:IORITY\\|OCESSING\\)\\)\\|QUERYFORMAT\\|RE\\(?:GION\\|PEATDISTANCE\\|QUIRES\\|SOLUTION\\)\\|S\\(?:CALE\\(?:BAR\\|DENOM\\)\\|HA\\(?:DOW\\(?:COLOR\\|SIZE\\)\\|PEPATH\\)\\|IZE\\(?:UNITS\\)?\\|T\\(?:ATUS\\|YLE\\(?:ITEM\\)?\\)\\|YMBOL\\(?:S\\(?:CALEDENOM\\|ET\\)\\)?\\)\\|T\\(?:ABLE\\|E\\(?:MP\\(?:LATE\\(?:PATTERN\\)?\\|PATH\\)\\|XT\\)\\|ILE\\(?:I\\(?:NDEX\\|TEM\\)\\|SRS\\)\\|O\\(?:LERANCE\\(?:UNITS\\)?\\)?\\|RANS\\(?:FORM\\|PARENT\\)\\|YPE\\)\\|UNITS\\|VALIDATION\\|W\\(?:IDTH\\|KT\\|RAP\\)\\)"
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; web object metadata (constant?)
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(regexp-opt '(
+              "ows_allowed_ip_list"
+              "wms_allowed_ip_list"
+              "ows_denied_ip_list"
+              "wms_denied_ip_list"
+              "ows_http_max_age"
+              "ows_schemas_location"
+              "ows_sld_enabled"
+              "ows_updatesequence"
+              "wms_abstract"
+              "wms_accessconstraints"
+              "wms_addresstype"
+              "wms_address "
+              "wms_city"
+              "wms_stateorprovince"
+              "wms_postcode"
+              "wms_country"
+              "wms_attribution_logourl_format"
+              "wms_attribution_logourl_height"
+              "wms_attribution_logourl_href"
+              "wms_attribution_logourl_width"
+              "wms_attribution_onlineresource"
+              "wms_attribution_title"
+              "wms_bbox_extended"
+              "wms_contactelectronicmailaddress"
+              "wms_contactfacsimiletelephone"
+              "wms_contactperson"
+              "wms_contactorganization"
+              "wms_contactposition"
+              "wms_contactvoicetelephone"
+              "wms_enable_request"
+              "ows_enable_request"
+              "wms_encoding"
+              "wms_feature_info_mime_type"
+              "wms_fees"
+              "wms_getcapabilities_version"
+              "wms_getlegendgraphic_formatlist"
+              "wms_keywordlist"
+              "wms_keywordlist_vocabulary"
+              "wms_languages"
+              "wms_layerlimit"
+              "wms_onlineresource"
+              "wms_remote_sld_max_bytes"
+              "wms_resx"
+              "wms_resy"
+              "wms_rootlayer_abstract"
+              "wms_rootlayer_keywordlist"
+              "wms_rootlayer_title"
+              "wms_service_onlineresource"
+              "wms_srs"
+              "wms_timeformat"
+              "wms_title"
+              "gml_exclude_items"
+              "gml_geometries"
+              "gml_groups"
+              "gml_include_items"
+              "gml_xml_items"
+              "wms_authorityurl_name"
+              "wms_authorityurl_href"
+              "wms_dataurl_format"
+              "wms_dataurl_href"
+              "wms_exclude_items"
+              "wms_extent"
+              "wms_getfeatureinfo_formatlist"
+              "wms_getmap_formatlist"
+              "wms_group_abstract"
+              "wms_group_title"
+              "wms_identifier_authority"
+              "wms_identifier_value"
+              "wms_include_items"
+              "wms_layer_group"
+              "wms_metadataurl_format"
+              "wms_metadataurl_href"
+              "wms_metadataurl_type"
+              "wms_opaque"
+              "wms_srs"
+              "wms_style"
+              "wms_timedefault"
+              "wms_timeextent"
+              "wms_timeitem"
+              "wms_title"
+              "angle"
+              "radius"
+              "bbox_pixel_is_point"
+) t)
+
+
+"\\(angle\\|bbox_pixel_is_point\\|gml_\\(?:\\(?:exclude_item\\|g\\(?:eometrie\\|roup\\)\\|\\(?:include\\|xml\\)_item\\)s\\)\\|ows_\\(?:allowed_ip_list\\|denied_ip_list\\|enable_request\\|http_max_age\\|s\\(?:chemas_location\\|ld_enabled\\)\\|updatesequence\\)\\|radius\\|wms_\\(?:a\\(?:bstract\\|ccessconstraints\\|ddress\\(?: \\|type\\)\\|llowed_ip_list\\|ttribution_\\(?:logourl_\\(?:format\\|h\\(?:eight\\|ref\\)\\|width\\)\\|\\(?:onlineresourc\\|titl\\)e\\)\\|uthorityurl_\\(?:href\\|name\\)\\)\\|bbox_extended\\|c\\(?:ity\\|o\\(?:ntact\\(?:electronicmailaddress\\|facsimiletelephone\\|organization\\|p\\(?:\\(?:ers\\|ositi\\)on\\)\\|voicetelephone\\)\\|untry\\)\\)\\|d\\(?:ataurl_\\(?:format\\|href\\)\\|enied_ip_list\\)\\|e\\(?:n\\(?:able_request\\|coding\\)\\|x\\(?:clude_items\\|tent\\)\\)\\|fe\\(?:ature_info_mime_type\\|es\\)\\|g\\(?:et\\(?:capabilities_version\\|\\(?:featureinfo\\|legendgraphic\\|map\\)_formatlist\\)\\|roup_\\(?:abstract\\|title\\)\\)\\|i\\(?:dentifier_\\(?:authority\\|value\\)\\|nclude_items\\)\\|keywordlist\\(?:_vocabulary\\)?\\|la\\(?:nguages\\|yer\\(?:_group\\|limit\\)\\)\\|metadataurl_\\(?:format\\|href\\|type\\)\\|o\\(?:\\(?:nlineresourc\\|paqu\\)e\\)\\|postcode\\|r\\(?:e\\(?:mote_sld_max_bytes\\|s[xy]\\)\\|ootlayer_\\(?:abstract\\|keywordlist\\|title\\)\\)\\|s\\(?:ervice_onlineresource\\|rs\\|t\\(?:\\(?:ateorprovinc\\|yl\\)e\\)\\)\\|ti\\(?:me\\(?:default\\|extent\\|format\\|item\\)\\|tle\\)\\)\\)"
+
+
+
+
+
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; next
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

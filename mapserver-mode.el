@@ -174,7 +174,7 @@
   (set (make-local-variable 'tab-width) mapserver-mode-tab-width)
   (setq major-mode 'mapserver-mode)
   (setq mode-name "MapServer")
-  (run-hooks 'mapserver-mode-hook))
+  (setq comment-start "#"))
 
 (provide 'mapserver-mode)
 

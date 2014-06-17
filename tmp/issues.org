@@ -1,9 +1,10 @@
-* Issues [0/5]
+* Issues [1/6]
 
 - [ ] SCALEBAR as Object
 - [ ] METADATA as Object
 - [ ] WMS properties as variables
 - [ ] Single quotes as 'string quotes'
 - [ ] INCLUDE as variable
+- [X] LABELMINSCALEDENOM is not a demon.
 
 
