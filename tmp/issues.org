@@ -1,10 +1,10 @@
-* Issues [1/6]
+* Issues [2/8]
 
-- [ ] SCALEBAR as Object
-- [ ] METADATA as Object
+- [ ] SCALEBAR as Object (Keywords schon angepasst)
+- [ ] METADATA as Object (Keywords schon angepasst)
 - [ ] WMS properties as variables
 - [ ] Single quotes as 'string quotes'
 - [ ] INCLUDE as variable
 - [X] LABELMINSCALEDENOM is not a demon.
-
-
+- [ ] SYMBOLSET as Object
+- [X] SYMBOLSET indentation
