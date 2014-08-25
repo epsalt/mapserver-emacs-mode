@@ -1,0 +1,69 @@
+*mapserver-mode* is an Emacs mode for editing [[http://www.mapserver.org][MapServer]] mapfiles.
+
+This mode allows syntax-highlighting and code-indentation when a Mapserver
+mapfile is opened in Emacs.
+
+Please report issues directly via Github or via the mapserver-users
+list. There are still some issues around.
+
+* Installation
+
+Grab the neccessary file at:
+[[https://github.com/AxxL/mapserver-emacs-mode/blob/master/mapserver-mode.el]]
+
+Put it into: $HOME/.emacs.d/lisp/
+
+You need to add the following lines to your $HOME/.emacs.d/init.el
+
+#+BEGIN_EXAMPLE
+(autoload 'mapserver-mode "mapserver-mode" "Mode for editing UMN MapServer files." t)
+(add-to-list 'auto-mode-alist '("\\.map\\'" . mapserver-mode))
+#+END_EXAMPLE
+
+If you haven't specified your load-path it is a good idea to do it now. Put
+the following line before the other two lines.
+
+#+BEGIN_EXAMPLE
+(add-to-list 'load-path "~/.emacs.d/lisp")
+#+END_EXAMPLE
+
+Some help for Emacs is available at the [[http://www.emacswiki.org/][Emacs Wiki]].
+
+
+* Screenshot
+
+[[https://raw.githubusercontent.com/AxxL/mapserver-emacs-mode/master/screenshots/emacs-mapserver-mode.png][Screenshot]]
+
+
+* Background
+
+This file is a fork of Hal Muellers mapserver-mode which he announced nearly
+[[http://lists.osgeo.org/pipermail/mapserver-users/2004-May/051493.html][10 years ago at the mapserver-users list]]. I simply updated the keywords and
+constants to the newest version and adjusted the regular expressions a bit.
+
+The original file seems to be based on the [[http://www.emacswiki.org/emacs/ModeTutorial][Mode Tutorial by Scott Andrew
+Borton]]. See also the [[http://www.emacswiki.org/emacs/SampleMode][Sample Major Mode example by Stefan Monnier]] if you want
+to write your own mode.
+
+In combination with yasnippet and auto-complete-mode you should have a nice
+way to edit mapfiles in your beloved Emacs environment.
+
+
+* Files in this Git repository
+
+There are some files in this Git repository that you don't need but which I
+wanted to have in this Git.
+
+The *screenshot* directory contains a screenshot. You don't need this directory.
+
+The *tmp* directory contains the ways to get to the regular expressions used
+in this mode. Follow the [[http://www.emacswiki.org/emacs/ModeTutorial][Mode Tutorial by Scott Andrew Borton]] if you want to
+know what happens here.
+
+You only need the [[https://github.com/AxxL/mapserver-emacs-mode/blob/master/mapserver-mode.el][mapserver-mode.el]] file. The other stuff isn't neccessary.
+
+
+* Issues
+
+Some issues might still exist but all in all this mode should give you a
+better overview over your mapfile.

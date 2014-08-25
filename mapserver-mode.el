@@ -1,16 +1,41 @@
 ;; mapserver-mode-el -- Major mode for editing UMN MapServer files
 ;;
 ;; Author: Axel Schaefer
-;; Modified: 04 June 2014
+;; Modified: 25 August 2014
 ;; Keywords: UMN Mapserver major-mode
 ;;
-;; Modified version of Hal Muellers mapserver-mode. Adjusted to mapserver
-;; 6.4.1. Known bugs still exist.
+;; Available at: https://github.com/AxxL/mapserver-emacs-mode
+;;
+;; Modified version of Hal Muellers mapserver-mode.
+;; Forked from: https://github.com/halmueller/mapserver-emacs-mode
+;; 
+;; Adjusted to mapserver 6.4.1.
 ;; 
 ;; The original file seems to be based on the Mode Tutorial by Scott Andrew
 ;; Borton at http://www.emacswiki.org/emacs/ModeTutorial. See also the
 ;; Sample Major Mode example by Stefan Monnier at
 ;; http://www.emacswiki.org/emacs/SampleMode.
+;; 
+;;
+;; INSTALLATION
+;; ------------
+;;
+;; Grab the neccessary file at:
+;; https://github.com/AxxL/mapserver-emacs-mode/blob/master/mapserver-mode.el
+;;
+;; Put it into: $HOME/.emacs.d/lisp/
+;;
+;; You need to add the following lines to your $HOME/.emacs.d/init.el
+;;
+;; (autoload 'mapserver-mode "mapserver-mode" "Mode for editing UMN MapServer files." t)
+;; (add-to-list 'auto-mode-alist '("\\.map\\'" . mapserver-mode))
+;;
+;; If you haven't specified your load-path it is a good idea to do it now. Put
+;; the following line before the other two lines.
+;;
+;; (add-to-list 'load-path "~/.emacs.d/lisp")
+;;
+;; Some help for Emacs is available at the [[http://www.emacswiki.org/][Emacs Wiki]].
 ;;
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; 
@@ -39,35 +64,7 @@
 ;; DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR
 ;; OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE
 ;; USE OR OTHER DEALINGS IN THE SOFTWARE.
-;;
-;; Commentary:
-;;
-;; This mode is for editing .MAP configuration files used by the UMN
-;; MapServer.  Current version of this mode can be found at
-;; http://www.mobilegeographics.com/mapserver/
-;;
-;; The MapServer software itself is at http://mapserver.gis.umn.edu/
-;;
-;; Usage: add these lines to your .emacs file:
 
-;; (autoload 'mapserver-mode "mapserver-mode" "Mode for editing UMN
-;; MapServer files." t)
-;;
-;; (add-to-list 'auto-mode-alist '("\\.map\\'" . mapserver-mode))
-;;
-;; and of course install this file (mapserver-mode.el) in a directory in
-;; your load-path.
-;;
-;; Known bugs:
-;;
-;;   constructs of the form PROJECTION "xxx" "yyy" "zzz" END break the
-;;   indentation.  Instead, use
-;;
-;;      PROJECTION
-;;        "xxx" "yyy" "zzz"
-;;      END
-;;
-;;   The bug is probably in the function 'mapserver-indent-line.
 
 
 ;;; Code:
