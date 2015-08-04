@@ -349,6 +349,35 @@
               "uvraster"
               "wfs"
               "wms"
+              ;; COMPOSITE
+              "clear"
+              "color-burn"
+              "color-dodge"
+              "contrast"
+              "darken"
+              "difference"
+              "dst"
+              "dst-atop"
+              "dst-in"
+              "dst-out"
+              "dst-over"
+              "exclusion"
+              "hard-light"
+              "invert"
+              "invert-rgb"
+              "lighten"
+              "minus"
+              "multiply"
+              "overlay"
+              "plus"
+              "screen"
+              "soft-light"
+              "src"
+              "src-atop"
+              "src-in"
+              "src-out"
+              "src-over"
+              "xor"
               ;; OGC
               "ows_allowed_ip_list"
               "wms_allowed_ip_list"
@@ -452,7 +481,8 @@
               "ows_contactvoicetelephone"
               ) t)
 
-"\\(LINE\\|MULTI\\(?:LINE\\|PO\\(?:INT\\|LYGON\\)\\)\\|O\\(?:FF\\|N\\)\\|PO\\(?:INT\\|LYGON\\)\\|RASTER\\|TRUETYPE\\|angle\\|bbox_pixel_is_point\\|contour\\|embed\\|gml_\\(?:\\(?:exclude_item\\|g\\(?:eometrie\\|roup\\)\\|\\(?:include\\|xml\\)_item\\)s\\)\\|kerneldensity\\|local\\|meters\\|o\\(?:gr\\|r\\(?:aclespatial\\)?\\|ws_\\(?:a\\(?:ccessconstraints\\|ddress\\(?:type\\)?\\|llowed_ip_list\\)\\|c\\(?:ity\\|o\\(?:ntact\\(?:electronicmailaddress\\|facsimiletelephone\\|information\\|organization\\|p\\(?:\\(?:ers\\|ositi\\)on\\)\\|voicetelephone\\)\\|untry\\)\\)\\|denied_ip_list\\|enable_request\\|fees\\|http_max_age\\|keywordlist\\|postcode\\|s\\(?:chemas_location\\|ld_enabled\\|tateorprovince\\)\\|updatesequence\\)\\)\\|p\\(?:lugin\\|ostgis\\)\\|r\\(?:adius\\|l\\)\\|sde\\|u\\(?:nion\\|vraster\\|[lr]\\)\\|w\\(?:fs\\|ms\\(?:_\\(?:a\\(?:bstract\\|ccessconstraints\\|ddress\\(?: \\|type\\)\\|llowed_ip_list\\|ttribution_\\(?:logourl_\\(?:format\\|h\\(?:eight\\|ref\\)\\|width\\)\\|\\(?:onlineresourc\\|titl\\)e\\)\\|uthorityurl_\\(?:href\\|name\\)\\)\\|bbox_extended\\|c\\(?:ity\\|o\\(?:ntact\\(?:electronicmailaddress\\|facsimiletelephone\\|organization\\|p\\(?:\\(?:ers\\|ositi\\)on\\)\\|voicetelephone\\)\\|untry\\)\\)\\|d\\(?:ataurl_\\(?:format\\|href\\)\\|enied_ip_list\\)\\|e\\(?:n\\(?:able_request\\|coding\\)\\|x\\(?:clude_items\\|tent\\)\\)\\|fe\\(?:ature_info_mime_type\\|es\\)\\|g\\(?:et\\(?:capabilities_version\\|\\(?:featureinfo\\|legendgraphic\\|map\\)_formatlist\\)\\|roup_\\(?:abstract\\|title\\)\\)\\|i\\(?:dentifier_\\(?:authority\\|value\\)\\|nclude_items\\)\\|keywordlist\\(?:_vocabulary\\)?\\|la\\(?:nguages\\|yer\\(?:_group\\|limit\\)\\)\\|metadataurl_\\(?:format\\|href\\|type\\)\\|o\\(?:\\(?:nlineresourc\\|paqu\\)e\\)\\|postcode\\|r\\(?:e\\(?:mote_sld_max_bytes\\|s[xy]\\)\\|ootlayer_\\(?:abstract\\|keywordlist\\|title\\)\\)\\|s\\(?:ervice_onlineresource\\|rs\\|t\\(?:\\(?:ateorprovinc\\|yl\\)e\\)\\)\\|ti\\(?:me\\(?:default\\|extent\\|format\\|item\\)\\|tle\\)\\)\\)?\\)\\)"
+"\\(LINE\\|MULTI\\(?:LINE\\|PO\\(?:INT\\|LYGON\\)\\)\\|O\\(?:FF\\|N\\)\\|PO\\(?:INT\\|LYGON\\)\\|RASTER\\|TRUETYPE\\|angle\\|bbox_pixel_is_point\\|c\\(?:lear\\|o\\(?:lor-\\(?:burn\\|dodge\\)\\|nt\\(?:our\\|rast\\)\\)\\)\\|d\\(?:arken\\|ifference\\|st\\(?:-\\(?:atop\\|in\\|o\\(?:ut\\|ver\\)\\)\\)?\\)\\|e\\(?:mbed\\|xclusion\\)\\|gml_\\(?:\\(?:exclude_item\\|g\\(?:eometrie\\|roup\\)\\|\\(?:include\\|xml\\)_item\\)s\\)\\|hard-light\\|invert\\(?:-rgb\\)?\\|kerneldensity\\|l\\(?:ighten\\|ocal\\)\\|m\\(?:eters\\|inus\\|ultiply\\)\\|o\\(?:gr\\|r\\(?:aclespatial\\)?\\|verlay\\|ws_\\(?:a\\(?:ccessconstraints\\|ddress\\(?:type\\)?\\|llowed_ip_list\\)\\|c\\(?:ity\\|o\\(?:ntact\\(?:electronicmailaddress\\|facsimiletelephone\\|information\\|organization\\|p\\(?:\\(?:ers\\|ositi\\)on\\)\\|voicetelephone\\)\\|untry\\)\\)\\|denied_ip_list\\|enable_request\\|fees\\|http_max_age\\|keywordlist\\|postcode\\|s\\(?:chemas_location\\|ld_enabled\\|tateorprovince\\)\\|updatesequence\\)\\)\\|p\\(?:lu\\(?:gin\\|s\\)\\|ostgis\\)\\|r\\(?:adius\\|l\\)\\|s\\(?:creen\\|de\\|oft-light\\|rc\\(?:-\\(?:atop\\|in\\|o\\(?:ut\\|ver\\)\\)\\)?\\)\\|u\\(?:nion\\|vraster\\|[lr]\\)\\|w\\(?:fs\\|ms\\(?:_\\(?:a\\(?:bstract\\|ccessconstraints\\|ddress\\(?: \\|type\\)\\|llowed_ip_list\\|ttribution_\\(?:logourl_\\(?:format\\|h\\(?:eight\\|ref\\)\\|width\\)\\|\\(?:onlineresourc\\|titl\\)e\\)\\|uthorityurl_\\(?:href\\|name\\)\\)\\|bbox_extended\\|c\\(?:ity\\|o\\(?:ntact\\(?:electronicmailaddress\\|facsimiletelephone\\|organization\\|p\\(?:\\(?:ers\\|ositi\\)on\\)\\|voicetelephone\\)\\|untry\\)\\)\\|d\\(?:ataurl_\\(?:format\\|href\\)\\|enied_ip_list\\)\\|e\\(?:n\\(?:able_request\\|coding\\)\\|x\\(?:clude_items\\|tent\\)\\)\\|fe\\(?:ature_info_mime_type\\|es\\)\\|g\\(?:et\\(?:capabilities_version\\|\\(?:featureinfo\\|legendgraphic\\|map\\)_formatlist\\)\\|roup_\\(?:abstract\\|title\\)\\)\\|i\\(?:dentifier_\\(?:authority\\|value\\)\\|nclude_items\\)\\|keywordlist\\(?:_vocabulary\\)?\\|la\\(?:nguages\\|yer\\(?:_group\\|limit\\)\\)\\|metadataurl_\\(?:format\\|href\\|type\\)\\|o\\(?:\\(?:nlineresourc\\|paqu\\)e\\)\\|postcode\\|r\\(?:e\\(?:mote_sld_max_bytes\\|s[xy]\\)\\|ootlayer_\\(?:abstract\\|keywordlist\\|title\\)\\)\\|s\\(?:ervice_onlineresource\\|rs\\|t\\(?:\\(?:ateorprovinc\\|yl\\)e\\)\\)\\|ti\\(?:me\\(?:default\\|extent\\|format\\|item\\)\\|tle\\)\\)\\)?\\)\\|xor\\)"
+
 
 
 

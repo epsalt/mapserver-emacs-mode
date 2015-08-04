@@ -29,6 +29,36 @@ uvraster
 wfs
 wms
 
+;; COMPOSITE
+clear
+color-burn
+color-dodge
+contrast
+darken
+difference
+dst
+dst-atop
+dst-in
+dst-out
+dst-over
+exclusion
+hard-light
+invert
+invert-rgb
+lighten
+minus
+multiply
+overlay
+plus
+screen
+soft-light
+src
+src-atop
+src-in
+src-out
+src-over
+xor
+
 ;; OGC
 ows_allowed_ip_list
 wms_allowed_ip_list
@@ -141,3 +171,4 @@ ows_contactposition
 ows_contactelectronicmailaddress
 ows_contactfacsimiletelephone
 ows_contactvoicetelephone
+
