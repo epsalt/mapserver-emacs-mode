@@ -78,14 +78,11 @@
 (add-to-list 'auto-mode-alist '("\\.map\\'" . mapserver-mode))
 (add-to-list 'auto-mode-alist '("\\.MAP\\'" . mapserver-mode))
 
-;;;(setq xyzzy (regexp-opt '("END" "MAP" "LAYER" "PROJECTION" "STYLE" "CLASS" "QUERYMAP" "LEGEND" "REFERENCE" "SCALEBAR" "WEB" "FEATURE" "POINTS" "JOIN" "OUTPUTFORMAT" "FONTSET") t))
 (defconst mapserver-font-lock-keywords-1
   (list
    ;; These define the beginning and end of each MapServer entity definition
-   ;; END
-   ;; CLASS FEATURE FONTSET JOIN LAYER LEGEND MAP OUTPUTFORMAT POINTS PROJECTION QUERYMAP REFERENCE SCALEBAR TEMPLATE STYLE WEB
-   '("\\<\\(CL\\(?:ASS\\|USTER\\)\\|END\\|FEATURE\\|GRID\\|JOIN\\|L\\(?:A\\(?:BEL\\|YER\\)\\|E\\(?:ADER\\|GEND\\)\\)\\|MAP\\|PROJECTION\\|QUERYMAP\\|REFERENCE\\|S\\(?:TYLE\\|YMBOL\\)\\|WEB\\)\\>" . font-lock-builtin-face)
-   ;; '("\\<\\(CLASS\\|END\\|F\\(?:EATURE\\|ONTSET\\)\\|JOIN\\|L\\(?:AYER\\|EGEND\\)\\|MAP\\|OUTPUTFORMAT\\|P\\(?:OINTS\\|ROJECTION\\)\\|QUERYMAP\\|REFERENCE\\|S\\(?:CALEBAR\\|TYLE\\)\\|WEB\\)\\>" . font-lock-builtin-face) 
+   '("\\<\\(C\\(?:L\\(?:ASS\\|USTER\\)\\|OMPOSITE\\)\\|END\\|FEATURE\\|GRID\\|JOIN\\|L\\(?:A\\(?:BEL\\|YER\\)\\|E\\(?:ADER\\|GEND\\)\\)\\|MAP\\|PROJECTION\\|QUERYMAP\\|REFERENCE\\|S\\(?:TYLE\\|YMBOL\\)\\|WEB\\)\\>" . font-lock-builtin-face)
+   
   '("\\('\\w*'\\)" . font-lock-variable-name-face))
   "Minimal highlighting expressions for MapServer mode.")
 
@@ -93,8 +90,7 @@
   (append mapserver-font-lock-keywords-1
 	  (list
 	   ;; These are some possible attributes of MapServer entities
-	   ;; "COLOR" "MAXSIZE" "MINSIZE" "OFFSET" "OUTLINECOLOR" "TRANSPARENT" "BACKGROUNDCOLOR" "ANTIALIAS" "NAME"
-       '("\\<\\(A\\(?:LIGN\\|N\\(?:CHORPOINT\\|GLE\\(?:ITEM\\)?\\|TIALIAS\\)\\)\\|B\\(?:\\(?:ACKGROUND\\(?:\\(?:SHADOW\\)?COLO\\)\\|UFFE\\)R\\)\\|C\\(?:HARACTER\\|LASS\\(?:GROUP\\|ITEM\\)\\|O\\(?:LOR\\|N\\(?:FIG\\|NECTION\\(?:TYPE\\)?\\)\\)\\)\\|D\\(?:ATA\\(?:PATTERN\\)?\\|E\\(?:BUG\\|FRESOLUTION\\)\\|UMP\\)\\|E\\(?:MPTY\\|NCODING\\|RROR\\|X\\(?:PRESSION\\|TENT\\)\\)\\|F\\(?:IL\\(?:LED\\|TER\\(?:ITEM\\)?\\)\\|O\\(?:CE\\|NT\\(?:SET\\)?\\|OTER\\)\\|ROM\\)\\|G\\(?:AP\\|EOMTRANSFORM\\|R\\(?:\\(?:IDSTE\\|OU\\)P\\)\\)\\|HEADER\\|I\\(?:MAGE\\(?:COLOR\\|PATH\\|QUALITY\\|TYPE\\|URL\\)?\\|N\\(?:ITIALGAP\\|TERLACE\\)\\|TEMS\\)\\|KEY\\(?:IMAGE\\|S\\(?:IZE\\|PACING\\)\\)\\|L\\(?:ABEL\\(?:ANGLEITEM\\|CACHE\\|FORMAT\\|ITEM\\|M\\(?:AXSCALEDENOM\\|INSCALEDEMON\\)\\|REQUIRES\\|SIZEITEM\\)\\|EGENDFORMAT\\|INE\\(?:CAP\\|JOIN\\(?:MAXSIZE\\)?\\)\\|OG\\)\\|M\\(?:A\\(?:RKER\\(?:SIZE\\)?\\|SK\\|X\\(?:ARCS\\|BOXSIZE\\|DISTANCE\\|FEATURES\\|GEOWIDTH\\|INTERVAL\\|LENGTH\\|OVERLAPANGLE\\|S\\(?:CALE\\(?:DENOM\\)?\\|\\(?:IZ\\|UBDIVID\\)E\\)\\|TEMPLATE\\|WIDTH\\)\\)\\|ETADATA\\|I\\(?:N\\(?:ARCS\\|BOXSIZE\\|DISTANCE\\|FEATURESIZE\\|GEOWIDTH\\|INTERVAL\\|S\\(?:CALEDENOM\\|\\(?:IZ\\|UBDIVID\\)E\\)\\|TEMPLATE\\|WIDTH\\)\\|SCALE\\)\\)\\|NAME\\|O\\(?:FFS\\(?:ET\\|IZE\\)\\|PACITY\\|UTLINE\\(?:COLOR\\|WIDTH\\)\\)\\|P\\(?:A\\(?:RTIALS\\|TTERN\\)\\|LUGIN\\|O\\(?:INTS\\|LAROFFSET\\|S\\(?:ITION\\|TLABELCACHE\\)\\)\\|R\\(?:IORITY\\|OCESSING\\)\\)\\|QUERYFORMAT\\|RE\\(?:GION\\|PEATDISTANCE\\|QUIRES\\|SOLUTION\\)\\|S\\(?:CALE\\(?:BAR\\|DENOM\\)\\|HA\\(?:DOW\\(?:COLOR\\|SIZE\\)\\|PEPATH\\)\\|IZE\\(?:UNITS\\)?\\|T\\(?:ATUS\\|YLE\\(?:ITEM\\)?\\)\\|YMBOL\\(?:S\\(?:CALEDENOM\\|ET\\)\\)?\\)\\|T\\(?:ABLE\\|E\\(?:MP\\(?:LATE\\(?:PATTERN\\)?\\|PATH\\)\\|XT\\)\\|ILE\\(?:I\\(?:NDEX\\|TEM\\)\\|SRS\\)\\|O\\(?:LERANCE\\(?:UNITS\\)?\\)?\\|RANS\\(?:FORM\\|PARENT\\)\\|YPE\\)\\|UNITS\\|VALIDATION\\|W\\(?:IDTH\\|KT\\|RAP\\)\\)\\>" . font-lock-variable-name-face)
+       '("\\<\\(A\\(?:LIGN\\|N\\(?:CHORPOINT\\|GLE\\(?:ITEM\\)?\\|TIALIAS\\)\\)\\|B\\(?:\\(?:ACKGROUND\\(?:\\(?:SHADOW\\)?COLO\\)\\|UFFE\\)R\\)\\|C\\(?:HARACTER\\|LASS\\(?:GROUP\\|ITEM\\)\\|O\\(?:LOR\\|MPOP\\|N\\(?:FIG\\|NECTION\\(?:TYPE\\)?\\)\\)\\)\\|D\\(?:ATA\\(?:PATTERN\\)?\\|E\\(?:BUG\\|FRESOLUTION\\)\\|UMP\\)\\|E\\(?:MPTY\\|NCODING\\|RROR\\|X\\(?:PRESSION\\|TENT\\)\\)\\|F\\(?:IL\\(?:LED\\|TER\\(?:ITEM\\)?\\)\\|O\\(?:CE\\|NT\\(?:SET\\)?\\|OTER\\)\\|ROM\\)\\|G\\(?:AP\\|EOMTRANSFORM\\|R\\(?:\\(?:IDSTE\\|OU\\)P\\)\\)\\|HEADER\\|I\\(?:MAGE\\(?:COLOR\\|PATH\\|QUALITY\\|TYPE\\|URL\\)?\\|N\\(?:ITIALGAP\\|TER\\(?:LACE\\|VALS\\)\\)\\|TEMS\\)\\|KEY\\(?:IMAGE\\|S\\(?:IZE\\|PACING\\)\\)\\|L\\(?:ABEL\\(?:ANGLEITEM\\|CACHE\\|FORMAT\\|ITEM\\|M\\(?:\\(?:AX\\|IN\\)SCALEDENOM\\)\\|REQUIRES\\|SIZEITEM\\)\\|EGENDFORMAT\\|INE\\(?:CAP\\|JOIN\\(?:MAXSIZE\\)?\\)\\|OG\\)\\|M\\(?:A\\(?:RKER\\(?:SIZE\\)?\\|SK\\|X\\(?:ARCS\\|BOXSIZE\\|DISTANCE\\|FEATURES\\|GEOWIDTH\\|INTERVAL\\|LENGTH\\|OVERLAPANGLE\\|S\\(?:CALE\\(?:DENOM\\)?\\|\\(?:IZ\\|UBDIVID\\)E\\)\\|TEMPLATE\\|WIDTH\\)\\)\\|ETADATA\\|I\\(?:N\\(?:ARCS\\|BOXSIZE\\|DISTANCE\\|FEATURESIZE\\|GEOWIDTH\\|INTERVAL\\|S\\(?:CALEDENOM\\|\\(?:IZ\\|UBDIVID\\)E\\)\\|TEMPLATE\\|WIDTH\\)\\|SCALE\\)\\)\\|NAME\\|O\\(?:FFS\\(?:ET\\|IZE\\)\\|PACITY\\|UTLINE\\(?:COLOR\\|WIDTH\\)\\)\\|P\\(?:A\\(?:RTIALS\\|TTERN\\)\\|LUGIN\\|O\\(?:INTS\\|LAROFFSET\\|S\\(?:ITION\\|TLABELCACHE\\)\\)\\|R\\(?:IORITY\\|OCESSING\\)\\)\\|QUERYFORMAT\\|RE\\(?:GION\\|PEATDISTANCE\\|QUIRES\\|SOLUTION\\)\\|S\\(?:CALE\\(?:BAR\\|DENOM\\)\\|HA\\(?:DOW\\(?:COLOR\\|SIZE\\)\\|PEPATH\\)\\|IZE\\(?:UNITS\\)?\\|T\\(?:ATUS\\|YLE\\(?:ITEM\\)?\\)\\|YMBOL\\(?:S\\(?:CALEDENOM\\|ET\\)\\)?\\)\\|T\\(?:ABLE\\|E\\(?:MP\\(?:LATE\\(?:PATTERN\\)?\\|PATH\\)\\|XT\\)\\|ILE\\(?:I\\(?:NDEX\\|TEM\\)\\|SRS\\)\\|O\\(?:LERANCE\\(?:UNITS\\)?\\)?\\|RANS\\(?:FORM\\|PAREN\\(?:CY\\|T\\)\\)\\|YPE\\)\\|UNITS\\|VALIDATION\\|W\\(?:IDTH\\|KT\\|RAP\\)\\)\\>" . font-lock-variable-name-face)
       ;; AXS
 	  ;; '("\\<\\(COLOR\\|MAXSIZE\\)\\>" . font-lock-keyword-face)
        '("\\<\\(ON\\|OFF\\)\\>" . font-lock-constant-face)))
@@ -106,7 +102,9 @@
 	   ;; These are some possible built-in values for MapServer attributes
 	   ;; POINT POLYGON LINE
        ;; AXS
-       '("\\<(LINE\\|PO\\(?:INT\\|LYGON\\))\\>" . font-lock-constant-face)))
+       ;; '("\\<(LINE\\|PO\\(?:INT\\|LYGON\\))\\>" . font-lock-constant-face)))
+       '("\\<\\(LINE\\|MULTI\\(?:LINE\\|PO\\(?:INT\\|LYGON\\)\\)\\|O\\(?:FF\\|N\\)\\|PO\\(?:INT\\|LYGON\\)\\|RASTER\\|TRUETYPE\\|angle\\|bbox_pixel_is_point\\|contour\\|embed\\|gml_\\(?:\\(?:exclude_item\\|g\\(?:eometrie\\|roup\\)\\|\\(?:include\\|xml\\)_item\\)s\\)\\|kerneldensity\\|local\\|meters\\|o\\(?:gr\\|r\\(?:aclespatial\\)?\\|ws_\\(?:a\\(?:ccessconstraints\\|ddress\\(?:type\\)?\\|llowed_ip_list\\)\\|c\\(?:ity\\|o\\(?:ntact\\(?:electronicmailaddress\\|facsimiletelephone\\|information\\|organization\\|p\\(?:\\(?:ers\\|ositi\\)on\\)\\|voicetelephone\\)\\|untry\\)\\)\\|denied_ip_list\\|enable_request\\|fees\\|http_max_age\\|keywordlist\\|postcode\\|s\\(?:chemas_location\\|ld_enabled\\|tateorprovince\\)\\|updatesequence\\)\\)\\|p\\(?:lugin\\|ostgis\\)\\|r\\(?:adius\\|l\\)\\|sde\\|u\\(?:nion\\|vraster\\|[lr]\\)\\|w\\(?:fs\\|ms\\(?:_\\(?:a\\(?:bstract\\|ccessconstraints\\|ddress\\(?: \\|type\\)\\|llowed_ip_list\\|ttribution_\\(?:logourl_\\(?:format\\|h\\(?:eight\\|ref\\)\\|width\\)\\|\\(?:onlineresourc\\|titl\\)e\\)\\|uthorityurl_\\(?:href\\|name\\)\\)\\|bbox_extended\\|c\\(?:ity\\|o\\(?:ntact\\(?:electronicmailaddress\\|facsimiletelephone\\|organization\\|p\\(?:\\(?:ers\\|ositi\\)on\\)\\|voicetelephone\\)\\|untry\\)\\)\\|d\\(?:ataurl_\\(?:format\\|href\\)\\|enied_ip_list\\)\\|e\\(?:n\\(?:able_request\\|coding\\)\\|x\\(?:clude_items\\|tent\\)\\)\\|fe\\(?:ature_info_mime_type\\|es\\)\\|g\\(?:et\\(?:capabilities_version\\|\\(?:featureinfo\\|legendgraphic\\|map\\)_formatlist\\)\\|roup_\\(?:abstract\\|title\\)\\)\\|i\\(?:dentifier_\\(?:authority\\|value\\)\\|nclude_items\\)\\|keywordlist\\(?:_vocabulary\\)?\\|la\\(?:nguages\\|yer\\(?:_group\\|limit\\)\\)\\|metadataurl_\\(?:format\\|href\\|type\\)\\|o\\(?:\\(?:nlineresourc\\|paqu\\)e\\)\\|postcode\\|r\\(?:e\\(?:mote_sld_max_bytes\\|s[xy]\\)\\|ootlayer_\\(?:abstract\\|keywordlist\\|title\\)\\)\\|s\\(?:ervice_onlineresource\\|rs\\|t\\(?:\\(?:ateorprovinc\\|yl\\)e\\)\\)\\|ti\\(?:me\\(?:default\\|extent\\|format\\|item\\)\\|tle\\)\\)\\)?\\)\\)\\>" . font-lock-constant-face)))
+       
   "Balls-out highlighting in MapServer mode.")
 
 (defvar mapserver-mode-tab-width 4)
@@ -137,7 +135,7 @@
 		    (setq not-indented nil))
 		;; CLASS FEATURE FONTSET GRID JOIN LAYER LEGEND MAP OUTPUTFORMAT POINTS PROJECTION QUERYMAP REFERENCE SCALEBAR STYLE WEB
 		(if (or (looking-at "^SYMBOL$")
-			(looking-at "^[ \t]*\\(CLASS$\\|FEATURE\\|FONTSET\\|GRID\\|JOIN\\|LABEL$\\|LAYER\\|LEGEND\\|MAP\\|METADATA\\|OUTPUTFORMAT\\|POINTS\\|PROJECTION\\|QUERYMAP\\|REFERENCE\\|SCALEBAR\\|SYMBOL$\\|SYMBOLSET\\|STYLE\\|WEB\\)"))	; This hint indicates that we need to indent an extra level
+			(looking-at "^[ \t]*\\(CLASS$\\|COMPOSITE\\|FEATURE\\|FONTSET\\|GRID\\|JOIN\\|LABEL$\\|LAYER\\|LEGEND\\|MAP\\|METADATA\\|OUTPUTFORMAT\\|POINTS\\|PROJECTION\\|QUERYMAP\\|REFERENCE\\|SCALEBAR\\|SYMBOL$\\|SYMBOLSET\\|STYLE\\|WEB\\)"))	; This hint indicates that we need to indent an extra level
 		    (progn
 		      (setq cur-indent (+ (current-indentation) mapserver-mode-tab-width)) ; Do the actual indenting
 		      (setq not-indented nil))
