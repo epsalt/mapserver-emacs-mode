@@ -6,6 +6,8 @@ mapfile is opened in Emacs.
 Please report issues directly via Github or via the mapserver-users
 list. There are still some issues around.
 
+Supports Mapserver 7.0.0.
+
 * Installation
 
 Grab the neccessary file at:
@@ -32,7 +34,7 @@ Some help for Emacs is available at the [[http://www.emacswiki.org/][Emacs Wiki]
 
 * Screenshot
 
-[[https://raw.githubusercontent.com/AxxL/mapserver-emacs-mode/master/screenshots/emacs-mapserver-mode.png][Screenshot]]
+[[https://raw.githubusercontent.com/AxxL/mapserver-emacs-mode/master/screenshot/emacs-mapserver-mode.png][Screenshot]]
 
 
 * Background
