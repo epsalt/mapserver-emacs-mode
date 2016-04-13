@@ -34,7 +34,7 @@ Some help for Emacs is available at the [[http://www.emacswiki.org/][Emacs Wiki]
 
 * Screenshot
 
-[[https://raw.githubusercontent.com/AxxL/mapserver-emacs-mode/master/screenshot/emacs-mapserver-mode.png][Screenshot]]
+[[file:screenshot/emacs-mapserver-mode.png]]
 
 
 * Background
