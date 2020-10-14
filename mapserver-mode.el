@@ -1,4 +1,4 @@
-;; mapserver-mode-el -- Major mode for editing UMN MapServer files
+;;; mapserver-mode.el --- Major mode for editing UMN MapServer files
 ;;
 ;; Author: Axel Schaefer
 ;; Modified: 25 August 2014
